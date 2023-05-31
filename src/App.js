@@ -7,45 +7,30 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <Typography
+        variant="h1"
+        sx={{
+          fontSize: "4rem",
+          marginBottom: 4,
+          textAlign: "center",
+        }}
+      >
+        Formulaire Shodo
+      </Typography>
       <Box
         component="form"
         sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
+          "& .MuiTextField-root": { m: 1, width: "20rem" },
           border: "solid",
+          width: "fit-content",
           padding: 5,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
         }}
       >
-        <Typography
-          variant="h1"
-          sx={{
-            fontSize: "4rem",
-            marginBottom: 4,
-          }}
-        >
-          Formulaire Shodo
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            marginBottom: 4,
-          }}
-        >
-          <TextField
-            required
-            label="Titre"
-            defaultValue="Votre titre"
-          ></TextField>
-          <TextField
-            required
-            multiline
-            label="Commentaire"
-            defaultValue="Votre commentaire"
-          ></TextField>
-        </Box>
+        <TextField required label="Titre"></TextField>
+        <TextField required multiline label="Commentaire"></TextField>
 
         <Button
           variant="contained"
@@ -54,6 +39,7 @@ function App() {
             display: "flex",
             alignItems: "center",
             backgroundColor: "black",
+            marginTop: 4,
           }}
         >
           Enregistrer
